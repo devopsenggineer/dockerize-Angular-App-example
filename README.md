@@ -25,4 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# dockerize-Angular-App-example
+# Steps for dockerizing an Angular-App-example
+
+git clone https://github.com/sysadmin-imran/dockerize-Angular-App-example.git
+cd Angular-App-example
+npm install
+ng build --prod
+sudo docker build -t dockerize-angular-app .
+sudo docker run -d -p 8900:80 --name ng-docker dockerize-angular-app
+
